@@ -163,14 +163,23 @@
         .todo-text { flex: 1; font-size: 12px; color: var(--text-main); }
         .edit-input { flex: 1; font-size: 12px; color: var(--text-main); border: none; border-bottom: 1px solid var(--point-color); outline: none; background: transparent; }
         .completed .todo-text { text-decoration: line-through !important; color: #DDD !important; }
+        
+        /* 버튼 스타일 통합 수정 */
         .actions { display: flex; gap: 3px; }
         .action-btn {
             width: 19px; height: 19px; background: white; border: 1px solid #F0F0F0;
             border-radius: 2px; cursor: pointer; font-size: 11px; color: #CCC;
             display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s ease;
         }
-        .heart-btn.active { color: var(--point-color) !important; border-color: var(--point-color) !important; }
-        .edit-btn:hover, .delete-btn:hover { color: var(--point-color); border-color: var(--point-color); }
+        
+        /* 하트 활성화 상태 + 모든 버튼 호버 상태 */
+        .action-btn:hover, 
+        .heart-btn.active { 
+            color: var(--point-color) !important; 
+            border-color: var(--point-color) !important; 
+        }
+
         .footer { text-align: center; padding: 0 0 10px 0; font-size: 10px; color: var(--main-theme); font-weight: 900; letter-spacing: 1px; }
     </style>
 </head>
